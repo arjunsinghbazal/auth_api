@@ -1,6 +1,6 @@
 const express = require("express");
-const connectDB = require("./config/db.js");
-const User = require("./models/user.js");
+const connectDB = require("./db.js");
+const User = require("./user.js");
 const bcrypt = require("bcrypt");
 const cors=require("cors");
 const app = express();
