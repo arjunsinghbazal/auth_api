@@ -6,10 +6,10 @@ const cors=require("cors");
 const app = express();
 app.use(express.json());
 app.use(cors())
-// Connect to the database
+
 connectDB()
 
-// Signup Endpoint
+// Signup
 app.post("/signup", async (req, res) => {
   const { name, email, password } = req.body;
 
@@ -38,7 +38,7 @@ app.post("/signup", async (req, res) => {
   }
 });
 
-// Login Endpoint
+// Login
 app.post("/login", async (req, res) => {
   const { email, password } = req.body;
 
@@ -69,7 +69,7 @@ app.post("/login", async (req, res) => {
 //   res.status(404).json({ success: false, message: "Route not found" });
 // });
 
-// Start the server
+// Start
 const PORT = 3000;
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
